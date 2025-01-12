@@ -4051,9 +4051,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>root@192.168.100.10</username>
-    <description>/diag_backup.php made changes</description>
-    <time>1721677865.4954</time>
+    <username>(system)</username>
+    <description>/usr/local/opnsense/mvc/script/run_migrations.php made changes</description>
+    <time>1736691840.5798</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -4139,10 +4139,11 @@ VN</content>
       <Lvtemplate version="0.0.1">
         <templates/>
       </Lvtemplate>
-      <Filter version="1.0.3">
+      <Filter version="1.0.4">
         <rules/>
         <snatrules/>
         <npt/>
+        <onetoone/>
       </Filter>
     </Firewall>
     <captiveportal version="1.0.1">
