@@ -4051,9 +4051,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>(system)</username>
-    <description>/usr/local/opnsense/mvc/script/run_migrations.php made changes</description>
-    <time>1736692948.7115</time>
+    <username>root@192.168.100.10</username>
+    <description>/api/kea/dhcpv4/add_peer/ made changes</description>
+    <time>1736724494.8169</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5248,7 +5248,13 @@ VN</content>
         </ha>
         <subnets/>
         <reservations/>
-        <ha_peers/>
+        <ha_peers>
+          <peer uuid="928d3ea1-1e10-479e-ab09-9da785e9de79">
+            <name>fw01</name>
+            <role>primary</role>
+            <url>https://192.168.100.254:9001/</url>
+          </peer>
+        </ha_peers>
       </dhcp4>
     </Kea>
     <wireguard>
