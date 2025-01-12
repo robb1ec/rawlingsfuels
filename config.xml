@@ -4070,9 +4070,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>(system)</username>
-    <description>/usr/local/opnsense/mvc/script/run_migrations.php made changes</description>
-    <time>1736694674.5853</time>
+    <username>root@192.168.100.10</username>
+    <description>/api/core/hasync/set made changes</description>
+    <time>1736724687.7823</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5523,7 +5523,7 @@ VN</content>
     <synchronizetoip>10.10.10.253</synchronizetoip>
     <username>root</username>
     <password>Rocogg133!</password>
-    <syncitems>aliases,authservers,captiveportal,certs,widgets,dhcpd,dnsforwarder,ifgroups,rules,schedules,suricata,ipsec,monit,nat,openvpn,shaper,staticroutes,dnsresolver,users,virtualip</syncitems>
+    <syncitems>aliases,authservers,captiveportal,certs,dhcpd,dnsforwarder,ifgroups,rules,schedules,suricata,ipsec,kea,monit,nat,openvpn,shaper,staticroutes,dnsresolver,users,virtualip</syncitems>
   </hasync>
   <dhcpdv6/>
   <openvpn>
