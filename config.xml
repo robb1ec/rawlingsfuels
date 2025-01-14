@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827704.0793</time>
+    <time>1736827729.2102</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5736,6 +5736,13 @@ VN</content>
             <hw_address>8c:ec:4b:53:f6:aa</hw_address>
             <hostname>gauge</hostname>
             <description>Fuel Gauge</description>
+          </reservation>
+          <reservation uuid="19376075-4ec9-4aa7-aea1-46f013356265">
+            <subnet>8be03635-5e6c-4b76-8826-9567a1a2a8ae</subnet>
+            <ip_address>192.168.100.35</ip_address>
+            <hw_address>24:5e:be:2d:99:5b</hw_address>
+            <hostname>FUELSNAS</hostname>
+            <description>Fuels NAS Public</description>
           </reservation>
         </reservations>
         <ha_peers>
