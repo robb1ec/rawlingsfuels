@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_subnet/ made changes</description>
-    <time>1736824422.6637</time>
+    <time>1736824562.9295</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5347,6 +5347,24 @@ VN</content>
             </option_data>
             <pools>192.168.130.130-192.168.130.199</pools>
             <description>Camera subnet</description>
+          </subnet4>
+          <subnet4 uuid="8be03635-5e6c-4b76-8826-9567a1a2a8ae">
+            <subnet>192.168.100.0/24</subnet>
+            <next_server/>
+            <option_data_autocollect>0</option_data_autocollect>
+            <option_data>
+              <domain_name_servers>192.168.100.10,192.168.100.11</domain_name_servers>
+              <domain_search>rawlingsfuels.co.uk</domain_search>
+              <routers>192.168.100.1</routers>
+              <static_routes/>
+              <domain_name>corp.rawlingfuels.co.uk</domain_name>
+              <ntp_servers>192.168.100.10,192.168.100.11</ntp_servers>
+              <time_servers>192.168.100.10,192.168.100.11</time_servers>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+            <pools>192.168.100.100-192.168.100.200</pools>
+            <description>LAN</description>
           </subnet4>
         </subnets>
         <reservations/>
