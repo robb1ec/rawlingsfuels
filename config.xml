@@ -4071,8 +4071,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <description>/api/kea/dhcpv4/add_subnet/ made changes</description>
-    <time>1736825347.2316</time>
+    <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
+    <time>1736825477.1168</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5421,7 +5421,15 @@ VN</content>
             <description>Wireless</description>
           </subnet4>
         </subnets>
-        <reservations/>
+        <reservations>
+          <reservation uuid="2bca0d3d-7212-4dbc-a120-165a35790657">
+            <subnet>0f3ccf47-5a59-429c-a929-a6bb4a10e184</subnet>
+            <ip_address>192.168.130.100</ip_address>
+            <hw_address>68:6d:bc:e9:8c:3a</hw_address>
+            <hostname>dvr</hostname>
+            <description>Camera DVR</description>
+          </reservation>
+        </reservations>
         <ha_peers>
           <peer uuid="41e3c496-fe49-422c-8a83-eb5af092c5fe">
             <name>fw02</name>
