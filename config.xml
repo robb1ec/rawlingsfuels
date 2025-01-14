@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827065.8196</time>
+    <time>1736827167.9621</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5631,6 +5631,13 @@ VN</content>
             <hw_address>64:16:7f:9b:5c:de</hw_address>
             <hostname>TEL2001-RCPT</hostname>
             <description>Telephone - Reception (2001)</description>
+          </reservation>
+          <reservation uuid="d877c2c7-8fda-4a8e-a221-dba4330c7c96">
+            <subnet>1e99a025-6b8e-49f2-82d2-a0ed74077588</subnet>
+            <ip_address>192.168.120.202</ip_address>
+            <hw_address>64:16:7f:9b:5d:d4</hw_address>
+            <hostname>TEL2002-TR</hostname>
+            <description>Telephone - Terry Rawlings (2002)</description>
           </reservation>
         </reservations>
         <ha_peers>
