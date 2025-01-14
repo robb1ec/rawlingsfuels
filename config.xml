@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827840.4403</time>
+    <time>1736827864.6048</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5771,6 +5771,13 @@ VN</content>
             <hw_address>08:f1:ea:f5:ff:74</hw_address>
             <hostname>ims03</hostname>
             <description>IMS Device 03</description>
+          </reservation>
+          <reservation uuid="f57de8e3-5f33-42c9-bcbe-17cd130b908f">
+            <subnet>8be03635-5e6c-4b76-8826-9567a1a2a8ae</subnet>
+            <ip_address>192.168.100.43</ip_address>
+            <hw_address>08:f1:ea:f5:ff:72</hw_address>
+            <hostname>ims04</hostname>
+            <description>IMS Device 04</description>
           </reservation>
         </reservations>
         <ha_peers>
