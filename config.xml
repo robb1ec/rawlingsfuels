@@ -4063,8 +4063,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1736829090.6696</time>
+    <description>/api/core/hasync/set made changes</description>
+    <time>1736829132.2771</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -6061,7 +6061,7 @@ VN</content>
     <synchronizetoip>10.10.10.253</synchronizetoip>
     <username>root</username>
     <password>Rocogg133!</password>
-    <syncitems>aliases,authservers,captiveportal,certs,dhcpd,dnsforwarder,ifgroups,rules,schedules,suricata,ipsec,kea,monit,nat,openvpn,shaper,staticroutes,dnsresolver,users,virtualip</syncitems>
+    <syncitems>aliases,authservers,captiveportal,certs,dnsforwarder,ifgroups,rules,schedules,suricata,ipsec,kea,monit,nat,openvpn,shaper,staticroutes,dnsresolver,users,virtualip</syncitems>
   </hasync>
   <dhcpdv6/>
   <openvpn>
