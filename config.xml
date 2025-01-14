@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827758.9749</time>
+    <time>1736827785.5941</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5750,6 +5750,13 @@ VN</content>
             <hw_address>24:5e:be:2d:99:5c</hw_address>
             <hostname>FUELSNAS-RSYNC</hostname>
             <description>Fuels NAS Rsync</description>
+          </reservation>
+          <reservation uuid="1a21504c-782b-45f6-9f47-e11ad1f6d1c8">
+            <subnet>8be03635-5e6c-4b76-8826-9567a1a2a8ae</subnet>
+            <ip_address>192.168.100.40</ip_address>
+            <hw_address>08:f1:ea:70:af:60</hw_address>
+            <hostname>ims01</hostname>
+            <description>IMS Device 01</description>
           </reservation>
         </reservations>
         <ha_peers>
