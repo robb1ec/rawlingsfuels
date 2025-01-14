@@ -4063,8 +4063,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <time>1736828420.6618</time>
-    <description>/services_dhcp.php made changes</description>
+    <description>/api/kea/dhcpv4/set made changes</description>
+    <time>1736828432.317</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5310,7 +5310,7 @@ VN</content>
       </ctrl_agent>
       <dhcp4 version="1.0.2">
         <general>
-          <enabled>0</enabled>
+          <enabled>1</enabled>
           <interfaces>opt3,lan,opt2,opt5,opt4</interfaces>
           <valid_lifetime>3600</valid_lifetime>
           <fwrules>1</fwrules>
