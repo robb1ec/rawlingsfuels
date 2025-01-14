@@ -4071,8 +4071,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <description>/api/kea/dhcpv4/add_subnet/ made changes</description>
-    <time>1736824562.9295</time>
+    <description>/api/kea/dhcpv4/set_subnet/0f3ccf47-5a59-429c-a929-a6bb4a10e184 made changes</description>
+    <time>1736824574.1233</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5346,7 +5346,7 @@ VN</content>
               <boot_file_name/>
             </option_data>
             <pools>192.168.130.130-192.168.130.199</pools>
-            <description>Camera subnet</description>
+            <description>Camera</description>
           </subnet4>
           <subnet4 uuid="8be03635-5e6c-4b76-8826-9567a1a2a8ae">
             <subnet>192.168.100.0/24</subnet>
