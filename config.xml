@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827384.4866</time>
+    <time>1736827411.4177</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5673,6 +5673,13 @@ VN</content>
             <hw_address>64:16:7f:9b:5d:fe</hw_address>
             <hostname>TEL2007-VD</hostname>
             <description>Telephone - Vivianne Dudley (2007)</description>
+          </reservation>
+          <reservation uuid="196e715a-0a79-4b4c-8f40-7b6cc62e3af3">
+            <subnet>1e99a025-6b8e-49f2-82d2-a0ed74077588</subnet>
+            <ip_address>192.168.120.208</ip_address>
+            <hw_address>64:16:7f:9b:5e:08</hw_address>
+            <hostname>TEL2008-SW</hostname>
+            <description>Telephone - Sam Wells (2008)</description>
           </reservation>
         </reservations>
         <ha_peers>
