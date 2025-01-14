@@ -4042,9 +4042,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>root@192.168.100.10</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1736829078.4439</time>
+    <username>(root)@10.10.10.254</username>
+    <time>1736829158.0276</time>
+    <description>Merged system,cert,ca,crl,virtualip,staticroutes,gateways,OPNsense,ifgroups,filter,schedules,aliases,unbound,ipsec,dnsmasq,openvpn,nat config sections from XMLRPC client.</description>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5781,9 +5781,9 @@ VN</content>
         </reservations>
         <ha_peers>
           <peer uuid="41e3c496-fe49-422c-8a83-eb5af092c5fe">
-            <name>fw01</name>
-            <role>primary</role>
-            <url>https://192.168.100.253:9001/</url>
+            <name>fw02</name>
+            <role>standby</role>
+            <url>https://192.168.100.254:9001/</url>
           </peer>
         </ha_peers>
       </dhcp4>
