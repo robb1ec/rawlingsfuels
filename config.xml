@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_subnet/ made changes</description>
-    <time>1736824884.4506</time>
+    <time>1736825347.2316</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5401,6 +5401,24 @@ VN</content>
             </option_data>
             <pools>192.168.150.100-192.168.150.200</pools>
             <description>Trust IT Solutions</description>
+          </subnet4>
+          <subnet4 uuid="5c679794-2363-4e07-a97b-d68f5a85c3f0">
+            <subnet>192.168.140.0/24</subnet>
+            <next_server/>
+            <option_data_autocollect>0</option_data_autocollect>
+            <option_data>
+              <domain_name_servers>192.168.100.10,192.168.100.11</domain_name_servers>
+              <domain_search>corp.rawlingsfuels.co.uk,rawlingsfuels.co.uk</domain_search>
+              <routers>192.168.140.1</routers>
+              <static_routes/>
+              <domain_name>wifi.rawlingsfuels.co.uk</domain_name>
+              <ntp_servers>192.168.100.10,192.168.100.11</ntp_servers>
+              <time_servers/>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+            <pools>192.168.140.100-192.168.140.200</pools>
+            <description>Wireless</description>
           </subnet4>
         </subnets>
         <reservations/>
