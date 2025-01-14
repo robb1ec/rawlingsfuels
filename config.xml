@@ -4071,8 +4071,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <description>/api/kea/dhcpv4/set_subnet/0f3ccf47-5a59-429c-a929-a6bb4a10e184 made changes</description>
-    <time>1736824574.1233</time>
+    <description>/api/kea/dhcpv4/add_subnet/ made changes</description>
+    <time>1736824715.2235</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5365,6 +5365,24 @@ VN</content>
             </option_data>
             <pools>192.168.100.100-192.168.100.200</pools>
             <description>LAN</description>
+          </subnet4>
+          <subnet4 uuid="1e99a025-6b8e-49f2-82d2-a0ed74077588">
+            <subnet>192.168.120.0/24</subnet>
+            <next_server/>
+            <option_data_autocollect>0</option_data_autocollect>
+            <option_data>
+              <domain_name_servers>192.168.100.10,192.168.100.11</domain_name_servers>
+              <domain_search>corp.rawlingsfuels.co.uk,rawlingsfuels.co.uk</domain_search>
+              <routers>192.168.120.1</routers>
+              <static_routes/>
+              <domain_name>tel.rawlingsfuels.co.uk</domain_name>
+              <ntp_servers>192.168.100.10,192.168.100.11</ntp_servers>
+              <time_servers>192.168.100.10,192.168.100.11</time_servers>
+              <tftp_server_name/>
+              <boot_file_name/>
+            </option_data>
+            <pools>192.168.120.100-192.168.120.200</pools>
+            <description>Telephone</description>
           </subnet4>
         </subnets>
         <reservations/>
