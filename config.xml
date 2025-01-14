@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736827286.2353</time>
+    <time>1736827323.1994</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5652,6 +5652,13 @@ VN</content>
             <hw_address>64:16:7f:9b:5d:d6</hw_address>
             <hostname>TEL2004-TD</hostname>
             <description>Telephone - Tom Davies (2004)</description>
+          </reservation>
+          <reservation uuid="ea00669c-76d9-44a6-b0f3-5c7b7370e1a4">
+            <subnet>1e99a025-6b8e-49f2-82d2-a0ed74077588</subnet>
+            <ip_address>192.168.120.205</ip_address>
+            <hw_address>64:16:7f:9b:5d:dd</hw_address>
+            <hostname>TEL2005-BO</hostname>
+            <description>Telephone - Brad Orsborn (2005)</description>
           </reservation>
         </reservations>
         <ha_peers>
