@@ -4072,7 +4072,7 @@ luZwE=&#xD;
   <revision>
     <username>root@192.168.100.10</username>
     <description>/api/kea/dhcpv4/add_reservation/ made changes</description>
-    <time>1736826287.3898</time>
+    <time>1736826328.792</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5519,6 +5519,13 @@ VN</content>
             <hw_address>bc:ba:c2:90:21:95</hw_address>
             <hostname>camera13</hostname>
             <description>Camera - Front right pointing to yard</description>
+          </reservation>
+          <reservation uuid="da2a035f-f4af-4031-8def-67ce398e822e">
+            <subnet>0f3ccf47-5a59-429c-a929-a6bb4a10e184</subnet>
+            <ip_address>192.168.130.114</ip_address>
+            <hw_address>bc:ba:c2:cd:05:bf</hw_address>
+            <hostname>camera14</hostname>
+            <description>Camera - Indoor front of warehouse looking back at store</description>
           </reservation>
         </reservations>
         <ha_peers>
