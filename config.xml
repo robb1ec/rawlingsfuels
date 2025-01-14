@@ -1413,7 +1413,6 @@ luZwE=&#xD;
       </staticmap>
     </opt2>
     <opt5>
-      <enable>1</enable>
       <defaultleasetime>864000</defaultleasetime>
       <maxleasetime>864060</maxleasetime>
       <gateway>192.168.150.1</gateway>
@@ -4066,7 +4065,7 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.10</username>
-    <time>1736828395.2928</time>
+    <time>1736828407.6201</time>
     <description>/services_dhcp.php made changes</description>
   </revision>
   <OPNsense>
