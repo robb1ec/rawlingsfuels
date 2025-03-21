@@ -4042,9 +4042,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>root@192.168.120.130</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1742482944.2765</time>
+    <username>root@192.168.120.104</username>
+    <description>/api/kea/dhcpv4/set_reservation/b5194b9c-2e24-4358-83a6-2d79ceeb9ca7 made changes</description>
+    <time>1742570833.4162</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5487,7 +5487,7 @@ VN</content>
           <reservation uuid="b5194b9c-2e24-4358-83a6-2d79ceeb9ca7">
             <subnet>0f3ccf47-5a59-429c-a929-a6bb4a10e184</subnet>
             <ip_address>192.168.130.122</ip_address>
-            <hw_address>08:54:11:A0:E9:c8</hw_address>
+            <hw_address>08:54:11:a0:e9:c8</hw_address>
             <hostname>camera27</hostname>
             <description>Camera pointing at skid tank steps</description>
           </reservation>
