@@ -4043,8 +4043,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.120.110</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1743511069.9516</time>
+    <description>/api/kea/dhcpv4/set_reservation/5af225e7-8dbf-48cd-936a-976ae687b22b made changes</description>
+    <time>1743511171.9845</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5389,7 +5389,7 @@ VN</content>
           <reservation uuid="5af225e7-8dbf-48cd-936a-976ae687b22b">
             <subnet>0f3ccf47-5a59-429c-a929-a6bb4a10e184</subnet>
             <ip_address>192.168.130.108</ip_address>
-            <hw_address>bc:ba:c2:9d:6f:4c</hw_address>
+            <hw_address>08:54:11:a0:e9:a7</hw_address>
             <hostname>camera08</hostname>
             <description>Camera - Rear Barn Centre</description>
           </reservation>
