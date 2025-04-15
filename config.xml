@@ -2070,13 +2070,14 @@ luZwE=&#xD;
     <rule>
       <protocol>tcp</protocol>
       <interface>opt6</interface>
+      <category/>
       <ipprotocol>inet</ipprotocol>
       <descr>CCTV Camera</descr>
       <tag/>
       <tagged/>
       <poolopts/>
       <associated-rule-id>nat_5e76a403092921.73304787</associated-rule-id>
-      <target>192.168.130.100</target>
+      <target>192.168.130.99</target>
       <local-port>8000</local-port>
       <source>
         <any>1</any>
@@ -2087,8 +2088,8 @@ luZwE=&#xD;
       </destination>
       <natreflection>purenat</natreflection>
       <updated>
-        <username>root@192.168.100.129</username>
-        <time>1585935973.7248</time>
+        <username>root@192.168.100.100</username>
+        <time>1744720442.3906</time>
         <description>/firewall_nat_edit.php made changes</description>
       </updated>
       <created>
@@ -3675,16 +3676,18 @@ luZwE=&#xD;
       <protocol>tcp</protocol>
       <ipprotocol>inet</ipprotocol>
       <destination>
-        <address>192.168.130.100</address>
+        <address>192.168.130.99</address>
         <port>8000</port>
       </destination>
-      <descr>NAT CCTV Camera</descr>
+      <descr>CCTV Camera</descr>
       <associated-rule-id>nat_5e76a403092921.73304787</associated-rule-id>
       <created>
         <username>root@192.168.100.169</username>
         <time>1584833539.0375</time>
         <description>/firewall_nat_edit.php made changes</description>
       </created>
+      <statetype>keep state</statetype>
+      <category/>
     </rule>
     <rule>
       <type>pass</type>
@@ -4063,8 +4066,8 @@ luZwE=&#xD;
   </widgets>
   <revision>
     <username>root@192.168.100.100</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1744720181.7689</time>
+    <time>1744720442.5208</time>
+    <description>/firewall_nat_edit.php made changes</description>
   </revision>
   <OPNsense>
     <Firewall>
