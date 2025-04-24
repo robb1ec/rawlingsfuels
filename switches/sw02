@@ -1,0 +1,233 @@
+config-file-header
+sw02
+v2.5.9.54 / RCBS3.1_930_871_120
+CLI v1.0
+file SSD indicator encrypted
+@
+ssd-control-start
+ssd config
+ssd file passphrase control unrestricted
+no ssd file integrity control
+ssd-control-end cb0a3fdb1f3a1af4e4430033719968c0
+!
+!
+unit-type-control-start
+unit-type unit 1 network gi uplink te
+unit-type unit 2 network gi uplink te
+unit-type unit 3 network gi uplink te
+unit-type unit 4 network gi uplink te
+unit-type unit 5 network gi uplink te
+unit-type unit 6 network gi uplink te
+unit-type unit 7 network gi uplink te
+unit-type unit 8 network gi uplink te
+unit-type-control-end
+!
+vlan database
+vlan 20,30,40,50,666,1025
+exit
+voice vlan state auto-triggered
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+no boot host auto-config
+no boot host auto-update
+bonjour interface range vlan 1
+hostname sw02
+line ssh
+exec-timeout 30
+exit
+aaa authentication login authorization SSH local
+aaa authentication enable authorization SSH enable
+line ssh
+ login authentication SSH
+ enable authentication SSH
+ password $86$DHdGMJ77uqAFyXfn$F/wiC9QFhMUG5bCYnakhIoy7ZzvHOoAX5TS2qyuICTYjLNfW33cLHdlv8Rkf/WIhSW/Ypea4dIN/KliaVv9djg== encrypted
+exit
+passwords aging 0
+username simon.light password encrypted $86$6nzC+Fri5sC7flgB$iZzRnpspkXD/TGxCZUA+GbPSsFCl2MfRugNPRQCaObSEkN9jCvtakeGbcglr6QqoG1gaR86DOmBnnKhfDXb+WA== privilege 15
+username andrew.covus password encrypted $86$QiZ5B6sFY1QLyqQl$3izJINGyws+lyxbl/73+7DKRErpDNKjzFe24xB+jHiIugn7aWhK3EknYhXGEhB6Halv/NsL2CQqpmmiR7SdDPA== privilege 15
+username robert.cockerill password encrypted $86$HMmiUdYJOnUTLpls$AquGFmuf8qSlzraZKhGjd7LQaZEtFbCDu5awLpijeT3+1EvVnf0sweL8Kb8UoMzVbPZu8hVYUWg6g48DpYH33A== privilege 15
+ip ssh server
+ip ssh password-auth
+ip http timeout-policy 1800 https-only
+no ip http server
+ip https certificate 2
+clock timezone J 0 minutes 0
+ip name-server  192.168.100.10
+!
+interface vlan 1
+ ip address 192.168.100.249 255.255.255.0
+ no ip address dhcp
+!
+interface vlan 20
+ name TEL
+ ip address 192.168.120.249 255.255.255.0
+!
+interface vlan 30
+ name CAM
+ ip address 192.168.130.249 255.255.255.0
+!
+interface vlan 40
+ name WIFI
+ ip address 192.168.140.249 255.255.255.0
+!
+interface vlan 50
+ name TIT
+ ip address 192.168.150.249 255.255.255.0
+!
+interface vlan 666
+ name WAN
+!
+interface vlan 1025
+ name "4G WAN Backup"
+!
+interface GigabitEthernet1/0/1
+ description TELVIP
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/2
+ description WIFIVIP
+ switchport access vlan 40
+!
+interface GigabitEthernet1/0/3
+ flowcontrol on
+ description WAP
+ spanning-tree portfast
+ switchport access vlan 40
+ no macro auto smartport
+!
+interface GigabitEthernet1/0/4
+ flowcontrol on
+ description WAP
+ spanning-tree portfast
+ switchport access vlan 40
+ no macro auto smartport
+!
+interface GigabitEthernet1/0/5
+ flowcontrol on
+ description WAP
+ spanning-tree portfast
+ switchport access vlan 40
+ no macro auto smartport
+!
+interface GigabitEthernet1/0/6
+ flowcontrol on
+ description WAP
+ spanning-tree portfast
+ switchport access vlan 40
+ no macro auto smartport
+!
+interface GigabitEthernet1/0/7
+ description WAP
+ switchport access vlan 40
+!
+interface GigabitEthernet1/0/8
+ flowcontrol on
+ description WAP
+ spanning-tree portfast
+ switchport access vlan 40
+ no macro auto smartport
+!
+interface GigabitEthernet1/0/9
+ description WAP
+ switchport access vlan 40
+!
+interface GigabitEthernet1/0/10
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/11
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/12
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/13
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/14
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/15
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/16
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/17
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/18
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/19
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/20
+ description CAM_DVR
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/23
+ description "4G WAN Backup FW02 igb1"
+ switchport access vlan 1025
+!
+interface GigabitEthernet1/0/25
+ description CAM_FW_VIP
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/26
+ description TITVIP
+ switchport access vlan 50
+!
+interface GigabitEthernet1/0/33
+ flowcontrol on
+ description "Unifi Controller"
+ switchport access vlan 40
+!
+interface GigabitEthernet1/0/35
+ spanning-tree portfast
+ spanning-tree link-type point-to-point
+ switchport mode trunk
+ macro description switch
+ !next command is internal.
+ macro auto smartport dynamic_type switch
+!
+interface GigabitEthernet1/0/45
+ description DVR2NDNIC
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/48
+ description FW2-VENTURE-WAN
+ switchport access vlan 666
+!
+interface TenGigabitEthernet1/0/3
+ spanning-tree link-type point-to-point
+ switchport mode trunk
+ macro description switch
+ !next command is internal.
+ macro auto smartport dynamic_type switch
+!
+interface TenGigabitEthernet1/0/4
+ spanning-tree link-type point-to-point
+ switchport mode trunk
+ macro description switch
+ !next command is internal.
+ macro auto smartport dynamic_type switch
+!
+exit
+macro auto controlled
+ip default-gateway 192.168.100.1
