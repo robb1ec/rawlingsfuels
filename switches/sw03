@@ -1,0 +1,355 @@
+config-file-header
+sw03
+v2.5.9.54 / RCBS3.1_930_871_120
+CLI v1.0
+file SSD indicator encrypted
+@
+ssd-control-start
+ssd config
+ssd file passphrase control unrestricted
+no ssd file integrity control
+ssd-control-end cb0a3fdb1f3a1af4e4430033719968c0
+!
+!
+unit-type-control-start
+unit-type unit 1 network gi uplink te
+unit-type unit 2 network gi uplink te
+unit-type unit 3 network gi uplink te
+unit-type unit 4 network gi uplink te
+unit-type unit 5 network gi uplink te
+unit-type unit 6 network gi uplink te
+unit-type unit 7 network gi uplink te
+unit-type unit 8 network gi uplink te
+unit-type-control-end
+!
+vlan database
+vlan 20,30,40,50,1025
+exit
+voice vlan state auto-triggered
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+no boot host auto-config
+no boot host auto-update
+bonjour interface range vlan 1
+hostname sw03
+line ssh
+exec-timeout 30
+exit
+passwords aging 0
+username cisco password encrypted $86$EHn9iWUQ1rTAU0Qi$nyL/Gbz31tXQXs7irZGeJxIATWEMUzixO3Gak+UhgM5EZcClqakYmJNrg4hSp7CI2119q5FKOrgDoUnnah1RGQ== privilege 15
+username simon.light password encrypted $86$S34JIEqRaHNYYa9M$WqNe0V0Wf7UOG7a56u+unJCBV6U+2OwDtuzWMaXnW1XVGZli6qaejRFhPh93vyk1hNvo4uDdczPiGw8l7od5Xw== privilege 15
+username andrew.covus password encrypted $86$1f6+Ey8LkAdzo7AE$Hi/cgrrHers5JHYqI4b6VmgMZyzfjXjSLJYKXADaC52/+edMTmhNEd3g3UuuvMSbbFpt/4BZ9iBTSp6XKCJVcw== privilege 15
+username robert.cockerill password encrypted $86$++dknUiYlgvNqAI6$Aj2z6M4Lz662eOxQbhiBOQszdhtQ0VucKl9H3hbjCM5FkHqBAyBgIgooxccB6FJt8mZ/UotBs4qU7Iu37ocFNw== privilege 15
+ip ssh server
+snmp-server server
+ip http timeout-policy 1800 https-only
+ip https certificate 2
+clock timezone J 0 minutes 0
+ip name-server  192.168.100.10
+!
+interface vlan 1
+ ip address 192.168.100.248 255.255.255.0
+ no ip address dhcp
+!
+interface vlan 20
+ name TEL
+ ip address 192.168.120.248 255.255.255.0
+!
+interface vlan 30
+ name CAM
+ ip address 192.168.130.248 255.255.255.0
+!
+interface vlan 40
+ name WIFI
+ ip address 192.168.140.248 255.255.255.0
+!
+interface vlan 50
+ name TIT
+ ip address 192.168.150.248 255.255.255.0
+!
+interface vlan 1025
+ name "4G WAN Bacup DMZ"
+!
+interface GigabitEthernet1/0/9
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk allowed vlan 1
+ macro description ip_phone
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone
+!
+interface GigabitEthernet1/0/10
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk allowed vlan 1
+ macro description ip_phone
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone
+!
+interface GigabitEthernet1/0/14
+ description TEL
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport access vlan 20
+ switchport trunk allowed vlan 1
+ macro description ip_phone
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone
+!
+interface GigabitEthernet1/0/16
+ description TEL
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport access vlan 20
+ switchport trunk allowed vlan 1
+ macro description ip_phone
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone
+!
+interface GigabitEthernet1/0/20
+ description TEL
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport access vlan 20
+ switchport trunk allowed vlan 1
+ macro description ip_phone
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone
+!
+interface GigabitEthernet1/0/22
+ description TEL
+ switchport access vlan 20
+!
+interface GigabitEthernet1/0/23
+ storm-control broadcast level 10
+ storm-control multicast level 10
+ port security max 10
+ port security mode max-addresses
+ port security discard trap 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport mode trunk
+ switchport trunk allowed vlan 1
+ macro description ip_phone_desktop
+ !next command is internal.
+ macro auto smartport dynamic_type ip_phone_desktop
+!
+interface GigabitEthernet1/0/25
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/26
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/27
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/28
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/29
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/30
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/31
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/32
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/33
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/34
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/35
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/36
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/37
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/38
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/39
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/40
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/41
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/42
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/43
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/44
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/45
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/46
+ switchport access vlan 30
+!
+interface GigabitEthernet1/0/48
+ description "4G Modem WAN Backup"
+ switchport access vlan 1025
+!
+interface TenGigabitEthernet1/0/3
+ spanning-tree link-type point-to-point
+ switchport mode trunk
+ macro description switch
+ !next command is internal.
+ macro auto smartport dynamic_type switch
+!
+interface TenGigabitEthernet1/0/4
+ spanning-tree link-type point-to-point
+ switchport mode trunk
+ macro description switch
+ !next command is internal.
+ macro auto smartport dynamic_type switch
+!
+interface GigabitEthernet2/0/25
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/26
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/27
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/28
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/29
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/30
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/31
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/32
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/33
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/34
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/35
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/36
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/37
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/38
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/39
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/40
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/41
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/42
+ description CAM
+ switchport access vlan 30
+!
+interface GigabitEthernet2/0/43
+ description CAM
+ switchport access vlan 30
+!
+exit
+macro auto controlled
+ip default-gateway 192.168.100.1
