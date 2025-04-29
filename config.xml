@@ -4045,9 +4045,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>root@192.168.100.100</username>
-    <time>1744720485.3838</time>
-    <description>/firewall_nat.php made changes</description>
+    <username>root@192.168.100.108</username>
+    <description>/api/kea/dhcpv4/set_reservation/3a21b803-7f56-457c-af2b-ddc7816b8454 made changes</description>
+    <time>1745946610.4066</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -5735,7 +5735,7 @@ VN</content>
           <reservation uuid="3a21b803-7f56-457c-af2b-ddc7816b8454">
             <subnet>8be03635-5e6c-4b76-8826-9567a1a2a8ae</subnet>
             <ip_address>192.168.100.70</ip_address>
-            <hw_address>3c:2a:f4:ae:8f:9f</hw_address>
+            <hw_address>94:DD:F8:28:F9:63</hw_address>
             <hostname>printer01</hostname>
             <description>Office Printer Viv</description>
           </reservation>
