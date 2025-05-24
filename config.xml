@@ -1,210 +1,210 @@
 <?xml version="1.0"?>
 <opnsense>
   <theme>opnsense</theme>
-  <sysctl>
-    <item>
-      <descr>Disable the pf ftp proxy handler.</descr>
+  <sysctl version="1.0.1">
+    <item uuid="fd81be52-ee01-4ee5-a658-1a25da3e8887">
       <tunable>debug.pfftpproxy</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Disable the pf ftp proxy handler.</descr>
     </item>
-    <item>
-      <descr>Increase UFS read-ahead speeds to match the state of hard drives and NCQ.</descr>
+    <item uuid="03a43fd0-f348-4854-8e58-b74904086d3d">
       <tunable>vfs.read_max</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Increase UFS read-ahead speeds to match the state of hard drives and NCQ.</descr>
     </item>
-    <item>
-      <descr>Set the ephemeral port range to be lower.</descr>
+    <item uuid="7fd7dff1-7007-4dca-857b-f74a853d07ce">
       <tunable>net.inet.ip.portrange.first</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set the ephemeral port range to be lower.</descr>
     </item>
-    <item>
-      <descr>Drop packets to closed TCP ports without returning a RST</descr>
+    <item uuid="8571c247-a0a8-4fcc-b947-7c5ce2caa39d">
       <tunable>net.inet.tcp.blackhole</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Drop packets to closed TCP ports without returning a RST</descr>
     </item>
-    <item>
-      <descr>Do not send ICMP port unreachable messages for closed UDP ports</descr>
+    <item uuid="d0af1478-8e6f-4453-a2a9-cc513f8d0c4b">
       <tunable>net.inet.udp.blackhole</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Do not send ICMP port unreachable messages for closed UDP ports</descr>
     </item>
-    <item>
-      <descr>Randomize the ID field in IP packets (default is 0: sequential IP IDs)</descr>
+    <item uuid="00810414-cf4e-4eac-b908-8a6090647225">
       <tunable>net.inet.ip.random_id</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Randomize the ID field in IP packets (default is 0: sequential IP IDs)</descr>
     </item>
-    <item>
-      <descr>
-        Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
-        It can also be used to probe for information about your internal networks. These functions come enabled
-        as part of the standard FreeBSD core system.
-      </descr>
+    <item uuid="85e23431-321f-4a27-8837-c6a0203787d1">
       <tunable>net.inet.ip.sourceroute</tunable>
-      <value>default</value>
-    </item>
-    <item>
+      <value/>
       <descr>
         Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
         It can also be used to probe for information about your internal networks. These functions come enabled
         as part of the standard FreeBSD core system.
       </descr>
-      <tunable>net.inet.ip.accept_sourceroute</tunable>
-      <value>default</value>
     </item>
-    <item>
+    <item uuid="d5a8e430-3e86-4e06-8919-ed5d7ac4cfc9">
+      <tunable>net.inet.ip.accept_sourceroute</tunable>
+      <value/>
+      <descr>
+        Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
+        It can also be used to probe for information about your internal networks. These functions come enabled
+        as part of the standard FreeBSD core system.
+      </descr>
+    </item>
+    <item uuid="2f856cc3-36e7-467e-8463-322a644c022f">
+      <tunable>net.inet.icmp.log_redirect</tunable>
+      <value/>
       <descr>
         This option turns off the logging of redirect packets because there is no limit and this could fill
         up your logs consuming your whole hard drive.
       </descr>
-      <tunable>net.inet.icmp.log_redirect</tunable>
-      <value>default</value>
     </item>
-    <item>
-      <descr>Drop SYN-FIN packets (breaks RFC1379, but nobody uses it anyway)</descr>
+    <item uuid="c71ac26c-3858-4044-8e8a-93b20c0a4f5c">
       <tunable>net.inet.tcp.drop_synfin</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Drop SYN-FIN packets (breaks RFC1379, but nobody uses it anyway)</descr>
     </item>
-    <item>
-      <descr>Enable sending IPv6 redirects</descr>
+    <item uuid="a832b414-3840-49be-bcf0-a23a0b0eb3e4">
       <tunable>net.inet6.ip6.redirect</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable sending IPv6 redirects</descr>
     </item>
-    <item>
-      <descr>Enable privacy settings for IPv6 (RFC 4941)</descr>
+    <item uuid="01fa63e9-ec49-4545-b58d-67b1c3ce1e5c">
       <tunable>net.inet6.ip6.use_tempaddr</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable privacy settings for IPv6 (RFC 4941)</descr>
     </item>
-    <item>
-      <descr>Prefer privacy addresses and use them over the normal addresses</descr>
+    <item uuid="d64fcaa6-ee4a-4993-b4d0-b40938393d0e">
       <tunable>net.inet6.ip6.prefer_tempaddr</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Prefer privacy addresses and use them over the normal addresses</descr>
     </item>
-    <item>
-      <descr>Generate SYN cookies for outbound SYN-ACK packets</descr>
+    <item uuid="6e1d9f45-e6f9-4bed-9e09-05efed128280">
       <tunable>net.inet.tcp.syncookies</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Generate SYN cookies for outbound SYN-ACK packets</descr>
     </item>
-    <item>
-      <descr>Maximum incoming/outgoing TCP datagram size (receive)</descr>
+    <item uuid="503181de-f5b1-4884-b367-66fb05217047">
       <tunable>net.inet.tcp.recvspace</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum incoming/outgoing TCP datagram size (receive)</descr>
     </item>
-    <item>
-      <descr>Maximum incoming/outgoing TCP datagram size (send)</descr>
+    <item uuid="84d3202f-8051-4697-9dc8-4efdb0e34902">
       <tunable>net.inet.tcp.sendspace</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum incoming/outgoing TCP datagram size (send)</descr>
     </item>
-    <item>
-      <descr>Do not delay ACK to try and piggyback it onto a data packet</descr>
+    <item uuid="02dc486b-9516-4994-8885-b0d7b3c679e1">
       <tunable>net.inet.tcp.delayed_ack</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Do not delay ACK to try and piggyback it onto a data packet</descr>
     </item>
-    <item>
-      <descr>Maximum outgoing UDP datagram size</descr>
+    <item uuid="bccfc001-70e3-481a-bfd3-e3d00c9c6ed8">
       <tunable>net.inet.udp.maxdgram</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum outgoing UDP datagram size</descr>
     </item>
-    <item>
-      <descr>Handling of non-IP packets which are not passed to pfil (see if_bridge(4))</descr>
+    <item uuid="d0062a2a-fe3d-496b-9560-c2f3d2ca63ca">
       <tunable>net.link.bridge.pfil_onlyip</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Handling of non-IP packets which are not passed to pfil (see if_bridge(4))</descr>
     </item>
-    <item>
-      <descr>Set to 1 to additionally filter on the physical interface for locally destined packets</descr>
+    <item uuid="5ced7871-7913-40ce-94a8-313889a46c12">
       <tunable>net.link.bridge.pfil_local_phys</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set to 1 to additionally filter on the physical interface for locally destined packets</descr>
     </item>
-    <item>
-      <descr>Set to 0 to disable filtering on the incoming and outgoing member interfaces.</descr>
+    <item uuid="9034cf0c-2afb-4a9b-9cb4-7274f1fb7bb2">
       <tunable>net.link.bridge.pfil_member</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set to 0 to disable filtering on the incoming and outgoing member interfaces.</descr>
     </item>
-    <item>
-      <descr>Set to 1 to enable filtering on the bridge interface</descr>
+    <item uuid="0a7a6ec1-c145-4b97-a6b3-95b641e9f5a9">
       <tunable>net.link.bridge.pfil_bridge</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set to 1 to enable filtering on the bridge interface</descr>
     </item>
-    <item>
-      <descr>Allow unprivileged access to tap(4) device nodes</descr>
+    <item uuid="9c8c608f-6a32-4ff1-adff-36c48b569f9e">
       <tunable>net.link.tap.user_open</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Allow unprivileged access to tap(4) device nodes</descr>
     </item>
-    <item>
-      <descr>Randomize PID's (see src/sys/kern/kern_fork.c: sysctl_kern_randompid())</descr>
+    <item uuid="2e7c5265-fb16-4afe-9371-f19342f0aba8">
       <tunable>kern.randompid</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Randomize PID's (see src/sys/kern/kern_fork.c: sysctl_kern_randompid())</descr>
     </item>
-    <item>
-      <descr>Maximum size of the IP input queue</descr>
+    <item uuid="7e40673a-28cc-48e2-a8f3-42c2cb69ecf5">
       <tunable>net.inet.ip.intr_queue_maxlen</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum size of the IP input queue</descr>
     </item>
-    <item>
-      <descr>Disable CTRL+ALT+Delete reboot from keyboard.</descr>
+    <item uuid="777480fc-a7c8-4583-a68c-d999411aebb6">
       <tunable>hw.syscons.kbd_reboot</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Disable CTRL+ALT+Delete reboot from keyboard.</descr>
     </item>
-    <item>
-      <descr>Enable TCP extended debugging</descr>
+    <item uuid="93427cd9-27be-49b4-b768-53f9796ce45b">
       <tunable>net.inet.tcp.log_debug</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable TCP extended debugging</descr>
     </item>
-    <item>
-      <descr>Set ICMP Limits</descr>
+    <item uuid="23667d92-d33c-42b2-aafa-d57239e9ac85">
       <tunable>net.inet.icmp.icmplim</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set ICMP Limits</descr>
     </item>
-    <item>
-      <descr>TCP Offload Engine</descr>
+    <item uuid="bc5b7dec-cafb-4dc4-98ae-d833ede4ae7b">
       <tunable>net.inet.tcp.tso</tunable>
-      <value>default</value>
+      <value/>
+      <descr>TCP Offload Engine</descr>
     </item>
-    <item>
-      <descr>UDP Checksums</descr>
+    <item uuid="6b057c71-d83b-429d-96e9-85729673942a">
       <tunable>net.inet.udp.checksum</tunable>
-      <value>default</value>
+      <value/>
+      <descr>UDP Checksums</descr>
     </item>
-    <item>
-      <descr>Maximum socket buffer size</descr>
+    <item uuid="c167c16e-b992-47e3-bd22-de0a01a0df26">
       <tunable>kern.ipc.maxsockbuf</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum socket buffer size</descr>
     </item>
-    <item>
-      <descr>Page Table Isolation (Meltdown mitigation, requires reboot.)</descr>
+    <item uuid="223f94fb-c1cf-4eac-aa2b-bacda337b785">
       <tunable>vm.pmap.pti</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Page Table Isolation (Meltdown mitigation, requires reboot.)</descr>
     </item>
-    <item>
-      <descr>Disable Indirect Branch Restricted Speculation (Spectre V2 mitigation)</descr>
+    <item uuid="a443b207-f5c9-4509-bf60-ea8e833e85f4">
       <tunable>hw.ibrs_disable</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Disable Indirect Branch Restricted Speculation (Spectre V2 mitigation)</descr>
     </item>
-    <item>
-      <descr>Hide processes running as other groups</descr>
+    <item uuid="aaf4837e-36a3-452c-9955-a62f77c38d4b">
       <tunable>security.bsd.see_other_gids</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Hide processes running as other groups</descr>
     </item>
-    <item>
-      <descr>Hide processes running as other users</descr>
+    <item uuid="bcf5bc7b-977f-4803-992a-78ae3e310989">
       <tunable>security.bsd.see_other_uids</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Hide processes running as other users</descr>
     </item>
-    <item>
+    <item uuid="9db65368-ce82-46d0-9b17-9f42b4152c1f">
+      <tunable>net.inet.ip.redirect</tunable>
+      <value>0</value>
       <descr>Enable/disable sending of ICMP redirects in response to IP packets for which a better,
         and for the sender directly reachable, route and next hop is known.
       </descr>
-      <tunable>net.inet.ip.redirect</tunable>
-      <value>0</value>
     </item>
-    <item>
+    <item uuid="1f668758-515f-4ecd-bf1c-7b2eb882d61b">
+      <tunable>net.inet.icmp.drop_redirect</tunable>
+      <value>1</value>
       <descr>
         Redirect attacks are the purposeful mass-issuing of ICMP type 5 packets. In a normal network, redirects
         to the end stations should not be required. This option enables the NIC to drop all inbound ICMP redirect
         packets without returning a response.
       </descr>
-      <tunable>net.inet.icmp.drop_redirect</tunable>
-      <value>1</value>
     </item>
-    <item>
+    <item uuid="a3f8f0ac-cd37-4067-96d5-fed6c29e206f">
       <tunable>dev.netmap.buf_num</tunable>
       <value>1000000</value>
       <descr>Automatically added by Zenarmor: Max NETMAP buffers</descr>
@@ -214,47 +214,70 @@
     <optimization>normal</optimization>
     <hostname>fw02</hostname>
     <domain>rawlingsfuels.co.uk</domain>
-    <group>
-      <name>admins</name>
-      <description>System Administrators</description>
-      <scope>system</scope>
+    <group uuid="d7df3308-8bd6-4094-8dd8-3117fe5c6e34">
       <gid>1999</gid>
-      <member>0</member>
-      <member>2000</member>
-      <member>2001</member>
-      <priv>page-all</priv>
-    </group>
-    <user>
-      <name>root</name>
-      <descr>System Administrator</descr>
+      <name>admins</name>
       <scope>system</scope>
-      <groupname>admins</groupname>
-      <password>$2y$10$58jPVzEQyrCtVcnzbHQRuOePPxei9kGJ7s88xz7upr4B8Kv56vgG.</password>
+      <description>System Administrators</description>
+      <priv>page-all</priv>
+      <member>0,2000,2001</member>
+    </group>
+    <user uuid="f247dbf4-31d7-4a55-b1de-2a015aee161d">
       <uid>0</uid>
-    </user>
-    <user>
-      <password>$2y$10$8v1DZ7eMOu2YJT2MgMOqWuAo1TomhwhY6xjTvl/URfTASdFoW/X8W</password>
-      <scope>user</scope>
-      <name>robert.cockerill</name>
-      <descr>Robert Cockerill</descr>
+      <name>root</name>
+      <disabled>0</disabled>
+      <scope>system</scope>
       <expires/>
       <authorizedkeys/>
-      <ipsecpsk/>
       <otp_seed/>
-      <email>mail@robbie-c.co.uk</email>
+      <shell/>
+      <password>$2y$10$58jPVzEQyrCtVcnzbHQRuOePPxei9kGJ7s88xz7upr4B8Kv56vgG.</password>
+      <landing_page/>
+      <comment/>
+      <email/>
+      <apikeys/>
+      <priv/>
+      <language/>
+      <descr>System Administrator</descr>
+      <dashboard/>
+    </user>
+    <user uuid="9e1996f1-4f57-40c0-820d-340cb63a97a0">
       <uid>2000</uid>
-      <cert>602299d69fc87</cert>
-    </user>
-    <user>
-      <password>$2y$10$STHenKrziGImTTyzT7ABr./zr8Fo5PW5ltagsm/3yGpsn20fP4XE.</password>
+      <name>robert.cockerill</name>
+      <disabled>0</disabled>
       <scope>user</scope>
-      <name>hasync</name>
-      <descr>HA Sync</descr>
       <expires/>
       <authorizedkeys/>
-      <ipsecpsk/>
       <otp_seed/>
+      <shell/>
+      <password>$2y$10$8v1DZ7eMOu2YJT2MgMOqWuAo1TomhwhY6xjTvl/URfTASdFoW/X8W</password>
+      <landing_page/>
+      <comment/>
+      <email>mail@robbie-c.co.uk</email>
+      <apikeys/>
+      <priv/>
+      <language/>
+      <descr>Robert Cockerill</descr>
+      <dashboard/>
+    </user>
+    <user uuid="9461e551-9089-4b6c-b991-6016e385767c">
       <uid>2001</uid>
+      <name>hasync</name>
+      <disabled>0</disabled>
+      <scope>user</scope>
+      <expires/>
+      <authorizedkeys/>
+      <otp_seed/>
+      <shell/>
+      <password>$2y$10$STHenKrziGImTTyzT7ABr./zr8Fo5PW5ltagsm/3yGpsn20fP4XE.</password>
+      <landing_page/>
+      <comment/>
+      <email/>
+      <apikeys/>
+      <priv/>
+      <language/>
+      <descr>HA Sync</descr>
+      <dashboard/>
     </user>
     <nextuid>2002</nextuid>
     <nextgid>2000</nextgid>
@@ -4045,9 +4068,9 @@ luZwE=&#xD;
     <column_count>2</column_count>
   </widgets>
   <revision>
-    <username>root@192.168.100.108</username>
-    <description>/api/kea/dhcpv4/set made changes</description>
-    <time>1745946612.6721</time>
+    <username>(system)</username>
+    <description>/usr/local/opnsense/mvc/script/run_migrations.php made changes</description>
+    <time>1748106571.5504</time>
   </revision>
   <OPNsense>
     <Firewall>
@@ -4140,7 +4163,7 @@ VN</content>
         <onetoone/>
       </Filter>
     </Firewall>
-    <captiveportal version="1.0.2">
+    <captiveportal version="1.0.4">
       <zones/>
       <templates/>
     </captiveportal>
@@ -4363,7 +4386,7 @@ VN</content>
       <loopbacks version="1.0.0"/>
       <neighbors version="1.0.0"/>
     </Interfaces>
-    <unboundplus version="1.0.11">
+    <unboundplus version="1.0.12">
       <general>
         <enabled>1</enabled>
         <port>53</port>
@@ -4445,12 +4468,14 @@ VN</content>
       <hosts/>
       <aliases/>
     </unboundplus>
-    <IPsec version="1.0.3">
+    <IPsec version="1.0.4">
       <general>
         <enabled/>
         <preferred_oldsa>0</preferred_oldsa>
         <disablevpnrules>0</disablevpnrules>
         <passthrough_networks/>
+        <user_source/>
+        <local_group/>
       </general>
       <charon>
         <max_ikev1_exchanges/>
@@ -4459,6 +4484,8 @@ VN</content>
         <ikesa_table_segments>4</ikesa_table_segments>
         <init_limit_half_open>1000</init_limit_half_open>
         <ignore_acquire_ts>1</ignore_acquire_ts>
+        <install_routes>0</install_routes>
+        <cisco_unity>0</cisco_unity>
         <make_before_break/>
         <retransmit_tries/>
         <retransmit_timeout/>
@@ -4489,6 +4516,29 @@ VN</content>
             <tnc>1</tnc>
           </daemon>
         </syslog>
+        <plugins>
+          <attr>
+            <subnet/>
+            <split-include/>
+            <x_28674/>
+            <x_28675/>
+            <x_28672/>
+            <x_28673>0</x_28673>
+            <x_28679/>
+            <dns/>
+            <nbns/>
+          </attr>
+          <eap-radius>
+            <servers/>
+            <accounting>0</accounting>
+            <class_group>0</class_group>
+          </eap-radius>
+          <xauth-pam>
+            <pam_service>ipsec</pam_service>
+            <session>0</session>
+            <trim_email>1</trim_email>
+          </xauth-pam>
+        </plugins>
       </charon>
       <keyPairs/>
       <preSharedKeys/>
@@ -4914,7 +4964,7 @@ VN</content>
     <zabbixagent>
       <settings/>
     </zabbixagent>
-    <AcmeClient version="4.1.0">
+    <AcmeClient version="4.2.0">
       <settings>
         <enabled>0</enabled>
         <autoRenewal>1</autoRenewal>
@@ -5227,7 +5277,7 @@ VN</content>
           <http_port>8000</http_port>
         </general>
       </ctrl_agent>
-      <dhcp4 version="1.0.2">
+      <dhcp4 version="1.0.3">
         <general>
           <enabled>1</enabled>
           <interfaces>opt3,lan,opt2,opt5,opt4</interfaces>
@@ -5256,6 +5306,7 @@ VN</content>
               <tftp_server_name/>
               <boot_file_name/>
             </option_data>
+            <match-client-id>1</match-client-id>
             <pools>192.168.130.130-192.168.130.199</pools>
             <description>Camera</description>
           </subnet4>
@@ -5274,6 +5325,7 @@ VN</content>
               <tftp_server_name/>
               <boot_file_name/>
             </option_data>
+            <match-client-id>1</match-client-id>
             <pools>192.168.100.100-192.168.100.200</pools>
             <description>LAN</description>
           </subnet4>
@@ -5292,6 +5344,7 @@ VN</content>
               <tftp_server_name/>
               <boot_file_name/>
             </option_data>
+            <match-client-id>1</match-client-id>
             <pools>192.168.120.100-192.168.120.200</pools>
             <description>Telephone</description>
           </subnet4>
@@ -5310,6 +5363,7 @@ VN</content>
               <tftp_server_name/>
               <boot_file_name/>
             </option_data>
+            <match-client-id>1</match-client-id>
             <pools>192.168.150.100-192.168.150.200</pools>
             <description>Trust IT Solutions</description>
           </subnet4>
@@ -5328,6 +5382,7 @@ VN</content>
               <tftp_server_name/>
               <boot_file_name/>
             </option_data>
+            <match-client-id>1</match-client-id>
             <pools>192.168.140.100-192.168.140.200</pools>
             <description>Wireless</description>
           </subnet4>
@@ -5790,6 +5845,24 @@ VN</content>
           </peer>
         </ha_peers>
       </dhcp4>
+      <dhcp6 version="1.0.0">
+        <general>
+          <enabled>0</enabled>
+          <manual_config>0</manual_config>
+          <interfaces/>
+          <valid_lifetime>4000</valid_lifetime>
+          <fwrules>1</fwrules>
+        </general>
+        <ha>
+          <enabled>0</enabled>
+          <this_server_name/>
+          <max_unacked_clients>2</max_unacked_clients>
+        </ha>
+        <subnets/>
+        <reservations/>
+        <pd_pools/>
+        <ha_peers/>
+      </dhcp6>
     </Kea>
     <wireguard>
       <client version="1.0.0">
@@ -5879,18 +5952,19 @@ VN</content>
   <ppps>
     <ppp/>
   </ppps>
-  <hasync version="1.0.1">
+  <hasync version="1.0.2">
     <disablepreempt>on</disablepreempt>
     <disconnectppps>0</disconnectppps>
     <pfsyncinterface>opt1</pfsyncinterface>
     <pfsyncpeerip>10.10.10.254</pfsyncpeerip>
     <pfsyncversion>1301</pfsyncversion>
     <synchronizetoip/>
+    <verifypeer>0</verifypeer>
     <username/>
     <password/>
     <syncitems/>
   </hasync>
-  <virtualip version="1.0.0">
+  <virtualip version="1.0.1">
     <vip uuid="1868bb3b-8efb-4dad-ab94-0299d2878d4a">
       <interface>opt2</interface>
       <mode>carp</mode>
@@ -5903,6 +5977,9 @@ VN</content>
       <vhid>2</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP TEL</descr>
     </vip>
     <vip uuid="da2638f0-8614-4d7d-bfda-94062e493010">
@@ -5917,6 +5994,9 @@ VN</content>
       <vhid>5</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP TIT</descr>
     </vip>
     <vip uuid="45747fdc-2fa0-4bed-8acf-0cfab9519c41">
@@ -5931,6 +6011,9 @@ VN</content>
       <vhid>4</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP WIFI</descr>
     </vip>
     <vip uuid="15b94708-eabe-4157-bc1b-b1eb53dc54c2">
@@ -5945,6 +6028,9 @@ VN</content>
       <vhid>3</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP CAM</descr>
     </vip>
     <vip uuid="35e222d6-f3cd-4592-ba3b-0ef0e7154682">
@@ -5959,6 +6045,9 @@ VN</content>
       <vhid>1</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP LAN</descr>
     </vip>
     <vip uuid="4e9e7b6c-d760-4542-89eb-d36bbef9fa80">
@@ -5973,6 +6062,9 @@ VN</content>
       <vhid>6</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP WAN</descr>
     </vip>
     <vip uuid="7a17db82-dd75-42f0-9906-741f8fec8085">
@@ -5987,6 +6079,9 @@ VN</content>
       <vhid>7</vhid>
       <advbase>1</advbase>
       <advskew>100</advskew>
+      <peer/>
+      <peer6/>
+      <nosync>0</nosync>
       <descr>VIP WAN Backup</descr>
     </vip>
   </virtualip>
@@ -6025,7 +6120,40 @@ VN</content>
     <openvpn-client/>
   </openvpn>
   <ipsec/>
-  <dnsmasq/>
+  <dnsmasq version="1.0.5">
+    <enable>0</enable>
+    <regdhcp>0</regdhcp>
+    <regdhcpstatic>0</regdhcpstatic>
+    <dhcpfirst>0</dhcpfirst>
+    <strict_order>0</strict_order>
+    <domain_needed>0</domain_needed>
+    <no_private_reverse>0</no_private_reverse>
+    <log_queries>0</log_queries>
+    <no_hosts>0</no_hosts>
+    <strictbind>0</strictbind>
+    <dnssec>0</dnssec>
+    <regdhcpdomain/>
+    <interface/>
+    <port/>
+    <dns_forward_max/>
+    <cache_size/>
+    <local_ttl/>
+    <add_mac/>
+    <add_subnet>0</add_subnet>
+    <strip_subnet>0</strip_subnet>
+    <dhcp>
+      <no_interface/>
+      <fqdn>0</fqdn>
+      <domain/>
+      <lease_max/>
+      <authoritative>0</authoritative>
+      <default_fw_rules>1</default_fw_rules>
+      <reply_delay/>
+      <enable_ra>0</enable_ra>
+      <nosync>0</nosync>
+    </dhcp>
+    <no_ident>1</no_ident>
+  </dnsmasq>
   <crl/>
   <schedules/>
   <ifgroups version="1.0.0">
